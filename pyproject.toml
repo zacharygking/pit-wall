@@ -1,0 +1,19 @@
+[project]
+name = "pit-wall"
+version = "0.1.0"
+description = "Call the strategy for one car in a real F1 race, against a simulator fitted to that race and an agent that ran the same car."
+requires-python = ">=3.12"
+dependencies = ["numpy>=2.0", "scipy>=1.14"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["pit_wall*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
